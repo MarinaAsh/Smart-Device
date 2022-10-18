@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  color: $base-black;
+  height: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 270px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 670px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+  }
+}

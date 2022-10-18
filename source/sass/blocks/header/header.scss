@@ -1,0 +1,136 @@
+.header {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  position: relative;
+  color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    background: $base-header;
+    filter: $base-filter;
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 20px 25px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 30px 20px 35px 20px;
+  }
+}
+
+.header__logo-block {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 135px;
+  }
+}
+
+.header__logo {
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-right: 25px;
+  }
+}
+
+.header__logo-image {
+  width: 35px;
+  height: 35px;
+
+  @media (min-width: $tablet-width) {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+.header__logo-heading {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    width: 135px;
+    margin: 0;
+    color: $base-color;
+  }
+}
+
+.header__logo-text {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    width: 135px;
+    margin: 0;
+    color: $base-white;
+  }
+}
+
+.header__contacts-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
+}
+
+.header__contacts-item {
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.header__contacts-link {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+  }
+}
+
+.header__contacts-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-family: "PT Mono", sans-serif;
+    font-weight: 400;
+    line-height: 18px;
+    color: $base-white;
+    margin-left: 15px;
+  }
+}
+
+.header__contacts-button {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    background: none;
+    padding: 15px;
+    border: 1px solid $base-white;
+  }
+}
