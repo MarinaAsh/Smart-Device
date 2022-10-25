@@ -1,12 +1,15 @@
 .button {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $base-font-family;
   font-size: 14px;
   font-weight: 700;
   display: block;
   text-align: center;
   text-transform: uppercase;
   color: $base-white;
-  border-radius: 5px;
+  border-radius: 3px;
+  border: none;
+  text-decoration: none;
+
 
   &:hover,
   &:focus {

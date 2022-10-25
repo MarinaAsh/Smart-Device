@@ -1,13 +1,16 @@
 // Base Colors
-$base-white:#ffffff;
+$base-white:rgba(242, 245, 246, 1);
 $base-black: #041827;
-$base-header: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
-$base-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-$base-color: rgba(255, 255, 255, 0.7);
+$base-button: rgba(0, 178, 255, 1);
+$accent-color: #00b2ff;
 
 
 // Viewports
 
-$tablet-width: 768px;
+$tablet-width: 1023px;
 $desktop-width: 1440px;
-$mobile-width-only: 767px;
+$mobile-width: 767px;
+
+
+$base-font-family: "Roboto Condensed", "Arial", sans-serif;
+$links-font-family: "PT Mono", "Arial", sans-serif;

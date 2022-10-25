@@ -1,136 +1,123 @@
 .header {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
-  position: relative;
-  color: $base-white;
-
-  @media (min-width: $tablet-width) {
-    background: $base-header;
-    filter: $base-filter;
-  }
+  background: url("/img/header/header-background.png") no-repeat center top, url("/img/header/promo-backgraund.png") no-repeat center top;
 }
 
 .header__wrapper {
+  min-height: 880px;
+  width: 1220px;
+  padding-right: 50px;
+  padding-left: 0;
+
+  @media (max-width: $tablet-width) {
+    min-height: 640px;
+    width: 670px;
+    padding: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 560px;
+    width: 270px;
+  }
+}
+
+.header__top {
   display: flex;
+  padding: 30px 0 35px 0;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px 10px 20px;
-  margin: 0 auto;
+  flex-wrap: wrap;
+}
 
-  @media (min-width: $tablet-width) {
-    padding: 20px 20px 25px 20px;
-  }
+.header__logo-img {
+  width: 215px;
+  height: 55px;
 
-  @media (min-width: $desktop-width) {
-    padding: 30px 20px 35px 20px;
+  @media (max-width: $mobile-width) {
+    width: 38px;
+    height: 38px;
   }
 }
 
-.header__logo-block {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    align-items: center;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-right: 135px;
-  }
-}
-
-.header__logo {
-  @media (min-width: $tablet-width) {
-    display: block;
-    margin-right: 25px;
-  }
-}
-
-.header__logo-image {
-  width: 35px;
-  height: 35px;
-
-  @media (min-width: $tablet-width) {
-    width: 55px;
-    height: 55px;
-  }
-}
-
-.header__logo-heading {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    width: 135px;
-    margin: 0;
-    color: $base-color;
-  }
-}
-
-.header__logo-text {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 29px;
-    width: 135px;
-    margin: 0;
-    color: $base-white;
-  }
-}
-
-.header__contacts-list {
+.header__contacts {
   display: flex;
-  align-items: center;
   justify-content: flex-end;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  box-sizing: border-box;
+  align-items: center;
+  flex-wrap: wrap;
 
-  @media (min-width: $desktop-width) {
-    justify-content: space-between;
+  @media (max-width: $tablet-width) {
+    margin-top: 15px;
+    align-self: flex-start;
   }
-}
 
-.header__contacts-item {
-  padding: 10px;
-  margin-left: 10px;
-}
-
-.header__contacts-link {
-  @media (min-width: $desktop-width) {
-    display: flex;
-    justify-content: flex-end;
-    text-decoration: none;
+  @media (max-width: $mobile-width) {
+    margin-top: 10px;
   }
 }
 
 .header__contacts-text {
-  display: none;
-
-  @media (min-width: $desktop-width) {
-    display: block;
-    font-family: "PT Mono", sans-serif;
-    font-weight: 400;
-    line-height: 18px;
-    color: $base-white;
-    margin-left: 15px;
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }
 
-.header__contacts-button {
-  display: none;
+.header__link {
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  color: $base-white;
+  font-family: $links-font-family;
+  transition: 0.3s;
+  text-decoration: none;
 
-  @media (min-width: $desktop-width) {
-    display: block;
-    background: none;
-    padding: 15px;
-    border: 1px solid $base-white;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &--phone {
+    margin-left: 125px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      top: 0;
+      left: -34px;
+      background: url("../img/icon-phone.svg") no-repeat center;
+      background-size: 20px 20px;
+    }
+
+    @media (max-width: $tablet-width) {
+      margin-left: 45px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-left: 50px;
+    }
+  }
+
+  &--email {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      top: 0;
+      left: -39px;
+      background: url("../img/icon-mail.svg") no-repeat center;
+      background-size: 20px 20px;
+    }
+  }
+}
+
+.header__button {
+  margin-left: 145px;
+  background: none;
+  padding: 10px 15px;
+  border: 1px solid $base-white;
+
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }

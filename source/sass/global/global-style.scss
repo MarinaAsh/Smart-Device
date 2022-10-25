@@ -19,14 +19,18 @@ body {
 }
 
 .wrapper {
-  width: 270px;
+  box-sizing: border-box;
   margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1492px;
+  width: 1240px;
 
-  @media (min-width: $tablet-width) {
-    width: 670px;
+  @media (max-width: $tablet-width) {
+    max-width: 100%;
+    width: 100%;
   }
 
-  @media (min-width: $desktop-width) {
-    width: 1220px;
+  @media (max-width: $mobile-width) {
+    width: 100%;
   }
 }
