@@ -1,0 +1,66 @@
+.about-us {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: $links-font-family;
+}
+
+.about-us__wrapper {
+  position: relative;
+  padding-left: 250px;
+  margin-bottom: 100px;
+  width: 1220px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 320px;
+    top: -5px;
+    left: 0;
+    background: url("../img/year.png") no-repeat center;
+    background-size: 150px 320px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 180px;
+    margin-bottom: 80px;
+    width: 670px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+    width: 270px;
+
+    &::before {
+      visibility: hidden;
+    }
+  }
+}
+
+.about-us__title {
+  margin-bottom: 15px;
+  font-size: 36px;
+  line-height: 51px;
+  font-family: $base-font-family;
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.about-us__text {
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.about-us__button {
+  padding: 14px 12px;
+  color: $accent-color;
+  border: 1px solid  $accent-color;
+  width: 180px;
+
+  @media (max-width: $mobile-width) {
+    width: 160px;
+  }
+}

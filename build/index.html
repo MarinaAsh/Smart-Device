@@ -20,7 +20,7 @@
             <a href="#" class="header__logo">
               <picture>
               <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
-              <img class="header__logo-img" src="img/logo.svg" alt="Логотип Smart Device">
+              <img class="header__logo-img" src="img/logo.svg" alt="Логотип Smart Device" width="215" height="55">
               </picture> </a>
             <div class="header__contacts">
               <a class="header__link header__link--email" href="mailto:info@sd.ru" aria-label="Напишите нам">
@@ -108,37 +108,28 @@
 
       <section class="products">
         <div class="products__wrapper wrapper">
-        <h2 class="products__title">Товары и услуги Smart Device</h2>
-        <h2 class="products__title--tablet">Smart Device предлагает следующие товары и услуги</h2>
+        <h2 class="products__title">Smart Device предлагает следующие товары и услуги</h2>
+        <h2 class="products__title--mobile">Товары и услуги <br> Smart Device</h2>
           <ul class="products__list">
-            <li class="product__item">
-              <a href="#" class="product__link product__link--production">
-                <picture>
-                  <source type="image/webp" srcset="img/product-production-desktop@1x.webp 1x, img/product-production-desktop@2x.webp 2x">
-                  <img class="product__image" src="img/product-production-desktop@1x.jpg" srcset="img/product-production-desktop@2x.jpg 2x" alt="Производство печатных плат">
-                </picture>
-                <h3 class="product__link-text">Производство печатных плат</h3>
-              </a>
+            <li class="products__item">
+              <article class="product product--production">
+              <a href="#" class="product__link"><span class="visually-hidden">Заказать производство печатных плат</span></a>
+              <h3 class="product__text">Производство печатных плат</h3>
+              </article>
             </li>
 
-            <li class="product__item">
-              <a href="#" class="product__link product__link--installation">
-                <picture>
-                  <source type="image/webp" srcset="img/product-installation-desktop@1x.webp 1x, img/product-installation-desktop@2x.webp 2x">
-                  <img class="product__image" src="img/product-installation-desktop@1x.jpg" srcset="img/product-installation-desktop@2x.jpg 2x" alt="Монтаж печатных плат">
-                </picture>
-                <h3 class="product__link-text">Монтаж печатных плат</h3>
-              </a>
+            <li class="products__item">
+              <article class="product product--installation">
+              <a href="#" class="product__link"><span class="visually-hidden">Монтаж печатных плат</span></a>
+              <h3 class="product__text">Монтаж печатных плат</h3>
+              </article>
             </li>
 
-            <li class="product__item">
-              <a href="#" class="product__link product__link--accessories">
-                <picture>
-                  <source type="image/webp" srcset="img/product-accessories-desktop@1x.webp 1x, img/product-accessories-desktop@2x.webp 2x">
-                  <img class="products__image" src="img/product-accessories-desktop@1x.jpg" srcset="img/product-accessories-desktop@2x.jpg 2x" width="370" height="620" alt="Комплектующие для светотехники">
-                </picture>
-                <h3 class="product__link-text">Комплектующие для светотехники</h3>
-              </a>
+            <li class="products__item">
+              <article class="product product--accessories">
+              <a href="#" class="product__link"><span class="visually-hidden">Комплектующие для светотехники</span></a>
+              <h3 class="product__text">Комплектующие для светотехники</h3>
+              </article>
             </li>
           </ul>
         </div>
@@ -150,16 +141,17 @@
           <h3 class="ask-us__title">Остались вопросы? Задайте их нам!</h3>
           <p class="ask-us__description">Мы проконсультируем Вас бесплатно</p>
             <form class="ask-us__form form" method="POST">
-              <label class="visually-hidden" for="ask-us-name">Ваше имя:</label>
-              <input type="text" name="name" placeholder="Имя" id="ask-us-name" required>
-              <label class="visually-hidden" for="ask-us-phone">Ваш номер телефона:</label>
-              <input type="tel" name="phone" placeholder="Телефон" id="ask-us-phone" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7}(000)000-00-00" required>
-              <label class="visually-hidden" for="ask-us-question">Ваш вопрос:</label>
-              <textarea name="question" cols="30" rows="6" placeholder="Ваш вопрос" id="ask-us-question" required></textarea>
+              <div class="form__wrapper">
+              <label class="visually-hidden" for="name">Ваше имя:</label>
+              <input type="text" name="name" placeholder="Имя" id="name" required>
+              <label class="visually-hidden" for="phone">Ваш номер телефона:</label>
+              <input type="tel" name="phone" placeholder="Телефон" id="phone" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7}(000)000-00-00" required>
+              <label class="visually-hidden" for="question">Ваш вопрос:</label>
+              <textarea name="question" cols="30" rows="6" placeholder="Ваш вопрос" id="question" required></textarea>
               <button class="button" type="submit">Задать вопрос</button>
-              <label class="form__checkbox">
-              <input class="visually-hidden" type="checkbox" name="agreement" required>
-              <span class="ask-us__text"> Я согласен на обработку персональных данных</span></label>
+              <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" checked>
+              <label class="form__agreement" for="agreement">Я согласен на обработку персональных данных</label>
+              </div>
             </form>
         </div>
       </section>
@@ -168,32 +160,28 @@
     <footer class="footer">
       <div class="footer__wrapper wrapper">
 
-        <div class="footer__block footer__block--social">
+        <div class="footer__block">
           <a href="#" class="footer__logo">
-            <img class="footer__logo-image footer__logo-image--tablet" src="img/decorative/logo.svg" width="35" height="35" alt="Логотип Smart Device"></a>
-            <p class="footer__logo-heading"><b>Smart Device</b> умные технологии</p>
+            <img class="footer__logo-image" src="img/logo.svg" width="215" height="55" alt="Логотип Smart Device"></a>
               <ul class="footer__social social">
                 <li class="social__item">
-                <a class="social__link" href="#">
+                <a class="social__link social__link--ok" href="#">
                 <span class="visually-hidden">Мы в Одноклассниках</span></a>
                 </li>
                 <li class="social__item">
-                <a class="social__link" href="#">
+                <a class="social__link social__link--vk" href="#">
                 <span class="visually-hidden">Мы в Вконтакте</span></a>
                 </li>
                 <li class="social__item">
-                <a class="social__link" href="#">
+                <a class="social__link social__link--pn" href="#">
                 <span class="visually-hidden">Мы в Пинтерест</span></a>
                 </li>
               </ul>
         </div>
 
         <div class="footer__nav nav">
-          <div class="nav__heading-block">
-            <h2 class="nav__title">Разделы сайта</h2>
-              <button class="nav__toggle" type="button">
-              <span class="visually-hidden">Показать/Спрятать разделы сайта</span></button>
-          </div>
+          <details open>
+            <summary class="nav__title">Разделы сайта</summary>
           <ul class="nav__list">
             <li class="nav__item">
             <a class="nav__link" href="#">О компании</a> </li>
@@ -210,14 +198,12 @@
             <li class="nav__item">
             <a class="nav__link" href="#">Монтаж печатных плат</a></li>
           </ul>
+          </details>
         </div>
 
         <div class="footer__contacts contacts">
-          <div class="contacts__heading-block">
-            <h2 class="contacts__title">Наш офис</h2>
-              <button class="contacts__toggle accordion__toggle" type="button">
-              <span class="visually-hidden">Показать/Спрятать контактную информацию</span></button>
-          </div>
+            <details open>
+            <summary class="contacts__title">Наш офис </summary>
           <ul class="contacts__list">
             <li class="contacts__item">
             <span class="contacts__address">г. Мытищи, Олимпийский проспект, д.10</span></li>
@@ -228,7 +214,7 @@
             <li class="contacts__item">
             <a  class="contacts__link" href="tel:+792692608079">+7 (925) 364-78-13</a></li>
           </ul>
-        </div>
+          </details>
       </div>
     </footer>
 
@@ -239,19 +225,21 @@
           <h2 class="modal__title">Закажите звонок</h2>
           <p class="modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
             <form class="modal__form form" method="POST">
-              <label class="visually-hidden" for="call-name">Ваше имя:</label>
-              <input type="text" name="name" placeholder="Имя" id="call-name" required>
-              <label class="visually-hidden" for="call-phone">Ваш номер телефона:</label>
-              <input type="tel" name="phone" placeholder="Телефон" id="call-phone" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7}(000)000-00-00" required>
-              <label class="visually-hidden" for="call-question">Ваш вопрос:</label>
-              <textarea name="question" cols="30" rows="6" placeholder="Ваш вопрос" id="call-question" required></textarea>
+            <div class="form__wrapper">
+              <label class="visually-hidden" for="name">Ваше имя:</label>
+              <input type="text" name="name" placeholder="Имя" id="name" required>
+              <label class="visually-hidden" for="phone">Ваш номер телефона:</label>
+              <input type="tel" name="phone" placeholder="Телефон" id="phone" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7}(000)000-00-00" required>
+              <label class="visually-hidden" for="question">Ваш вопрос:</label>
+              <textarea name="question" cols="30" rows="6" placeholder="Ваш вопрос" id="question" required></textarea>
               <button class="button" type="submit">Отправить</button>
-              <label class="form__checkbox">
-              <input class="visually-hidden" id="call-checkbox" type="checkbox" name="agreement" required>
-              <span>Я согласен на обработку персональных данных</span></label>
+              <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" checked>
+              <label class="form__agreement" for="agreement">Я согласен на обработку персональных данных</label>
             </form>
+            </div>
       </div>
     </section>
-
+    <div class="overlay"></div>
+    <script src="js/script.js"></script>
   </body>
 </html>

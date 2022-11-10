@@ -1,0 +1,90 @@
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow-y: scroll;
+  font-family: $links-font-family;
+  font-size: 16px;
+  line-height: 22px;
+  color: $base-white;
+  z-index: 200;
+
+  &--show {
+    display: block;
+  }
+}
+
+.modal__wrapper {
+  margin-bottom: 40px;
+  padding: 40px;
+  position: absolute;
+  width: 500px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #00b2ff;
+  box-sizing: border-box;
+}
+
+.modal__close {
+  position: absolute;
+  top: 22px;
+  right: 21px;
+  width: 16.56px;
+  height: 16.56px;
+  font-size: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: -2px;
+    width: 23px;
+    height: 1px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.modal__title {
+  font-family: $base-font-family;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.modal__description {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.modal__form input {
+  width: 100%;
+}
+
+.modal__form button {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.modal__form .form__agreement {
+  width: 100%;
+  margin-left: 32px;
+}

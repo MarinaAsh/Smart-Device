@@ -1,0 +1,120 @@
+.form__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 580px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 670px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.form input,
+.form textarea,
+.form select {
+  appearance: none;
+}
+
+.form input,
+.form textarea {
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 1px solid transparent;
+  background: rgba(4, 20, 39, 0.15);
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: $links-font-family;
+  color: $base-white;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid $base-white;
+  }
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: $base-white;
+}
+
+.form input {
+  width: 47%;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.form textarea {
+  width: 100%;
+  min-height: 155px;
+  resize: none;
+  margin-bottom: 35px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+    min-height: 180px;
+  }
+}
+
+.form input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.form input[type="checkbox"] + label {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    top: 1px;
+    left: -32px;
+    border: 1px solid #ffffff;
+  }
+}
+
+.form input[type="checkbox"]:checked + label {
+  &::before {
+    background: url("../img/checkbox-icon.svg") no-repeat center;
+  }
+}
+
+.form button[type="submit"] {
+  min-width: 265px;
+  padding: 15px 25px;
+  background: $base-black;
+
+  @media (max-width: $tablet-width) {
+    min-width: 265px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 25px;
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+.form__agreement {
+  width: 230px;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.8);
+
+  @media (max-width: $mobile-width) {
+    margin-left: 30px;
+  }
+}

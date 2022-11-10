@@ -13,15 +13,24 @@
 @import "./blocks/header/promo.scss";
 
 // ============= Main
-@import "./blocks/main/advantages.scss";
+
 // Advantages
+@import "./blocks/main/advantages.scss";
 
 // About-us
+@import "./blocks/main/about-us.scss";
 
 // Products
+@import "./blocks/main/products.scss";
 
 // Ask-us
-
+@import "./blocks/main/ask-us.scss";
+@import "./blocks/main/form.scss";
 // Footer
-
+@import "./blocks/footer/footer.scss";
+@import "./blocks/footer/social.scss";
+@import "./blocks/footer/nav.scss";
+@import "./blocks/footer/contacts.scss";
+@import "./blocks/footer/details.scss";
 // Modal
+@import "./blocks/modal.scss";

@@ -1,0 +1,50 @@
+summary {
+  display: inline-block;
+}
+
+@media (max-width: $mobile-width) {
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::-moz-list-bullet {
+    list-style-type: none;
+  }
+
+  summary::marker {
+    display: none;
+  }
+
+  summary {
+    display: inline-block;
+    font-size: 1.4em;
+    cursor: pointer;
+    position: relative;
+  }
+
+  summary::after {
+    content: "";
+    color: $base-white;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background: url("../img/accordion-plus.svg");
+    right: 0;
+  }
+
+  details[open] > summary::after {
+    content: "";
+    background: url("../img/accordion-minus.svg");
+    color: $base-white;
+  }
+
+  summary:focus {
+    outline: 0;
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3), inset 0 0 2px rgba(0, 0, 0, 0.3);
+  }
+
+  details {
+    display: block;
+    width: 270px;
+  }
+}
