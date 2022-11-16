@@ -16,33 +16,35 @@
     <header class="header">
       <div class="header__wrapper wrapper">
         <h1 class="visually-hidden">Smart Device Умные технологии</h1>
-          <div class="header__top">
-            <a href="#" class="header__logo">
-              <picture>
-              <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
+          <a href="#" class="header__logo">
+            <picture>
+            <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
               <img class="header__logo-img" src="img/logo.svg" alt="Логотип Smart Device" width="215" height="55">
-              </picture> </a>
-            <div class="header__contacts">
-              <a class="header__link header__link--email" href="mailto:info@sd.ru" aria-label="Напишите нам">
-                <span class="header__contacts-text">info@sd.ru </span></a>
-              <a class="header__link header__link--phone" href="tel:+74950005252" aria-label="Позвоните нам">
-                <span class="header__contacts-text"> +7 (495) 000 52 52 </span> </a>
-              <button class="header__button button" type="button">Заказать звонок</button>
-            </div>
-          </div>
-
-          <div class="header__promo promo">
-          <h2 class="promo__title">Печатные платы</h2>
-            <p class="promo__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a class="button promo__button" href="#ask-us">
-              <span class="promo__button-text promo__button-text--tablet">Получить бесплатную консультацию</span>
-              <span class="promo__button-text promo__button-text--mobile">Бесплатная консультация</span>
+            </picture>
+          </a>
+          <div class="header__contacts">
+            <a class="header__link header__link--email" href="mailto:info@sd.ru" aria-label="Напишите нам">
+              <span class="header__contacts-text">info@sd.ru </span>
             </a>
+            <a class="header__link header__link--phone" href="tel:+74950005252" aria-label="Позвоните нам">
+              <span class="header__contacts-text"> +7 (495) 000 52 52 </span>
+            </a>
+            <button class="header__button button" type="button">Заказать звонок</button>
           </div>
       </div>
     </header>
 
     <main class="main">
+      <section class="promo">
+        <div class="promo__wrapper wrapper">
+        <h2 class="promo__title">Печатные платы</h2>
+          <p class="promo__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <a class="button promo__button" href="#ask-us">
+            <span class="promo__button-text promo__button-text--tablet">Получить бесплатную консультацию</span>
+            <span class="promo__button-text promo__button-text--mobile">Бесплатная консультация</span>
+          </a>
+          </div>
+      </section>
       <section class="advantages">
         <div class="advantages__wrapper wrapper">
           <h2 class="visually-hidden">Преимущества</h2>
@@ -109,25 +111,31 @@
       <section class="products">
         <div class="products__wrapper wrapper">
         <h2 class="products__title">Smart Device предлагает следующие товары и услуги</h2>
-        <h2 class="products__title--mobile">Товары и услуги <br> Smart Device</h2>
+        <h2 class="products__title-mobile">Товары и услуги <br> Smart Device</h2>
           <ul class="products__list">
             <li class="products__item">
               <article class="product product--production">
-              <a href="#" class="product__link"><span class="visually-hidden">Заказать производство печатных плат</span></a>
+              <a href="#" class="product__link">
+                <span class="visually-hidden">Заказать производство печатных плат</span>
+              </a>
               <h3 class="product__text">Производство печатных плат</h3>
               </article>
             </li>
 
             <li class="products__item">
               <article class="product product--installation">
-              <a href="#" class="product__link"><span class="visually-hidden">Монтаж печатных плат</span></a>
+              <a href="#" class="product__link">
+                <span class="visually-hidden">Монтаж печатных плат</span>
+              </a>
               <h3 class="product__text">Монтаж печатных плат</h3>
               </article>
             </li>
 
             <li class="products__item">
               <article class="product product--accessories">
-              <a href="#" class="product__link"><span class="visually-hidden">Комплектующие для светотехники</span></a>
+              <a href="#" class="product__link">
+                <span class="visually-hidden">Комплектующие для светотехники</span>
+              </a>
               <h3 class="product__text">Комплектующие для светотехники</h3>
               </article>
             </li>
@@ -166,60 +174,75 @@
               <ul class="footer__social social">
                 <li class="social__item">
                 <a class="social__link social__link--ok" href="#">
-                <span class="visually-hidden">Мы в Одноклассниках</span></a>
+                  <span class="visually-hidden">Мы в Одноклассниках</span>
+                </a>
                 </li>
                 <li class="social__item">
                 <a class="social__link social__link--vk" href="#">
-                <span class="visually-hidden">Мы в Вконтакте</span></a>
+                  <span class="visually-hidden">Мы в Вконтакте</span>
+                </a>
                 </li>
                 <li class="social__item">
                 <a class="social__link social__link--pn" href="#">
-                <span class="visually-hidden">Мы в Пинтерест</span></a>
+                  <span class="visually-hidden">Мы в Пинтерест</span>
+                </a>
                 </li>
               </ul>
         </div>
 
         <div class="footer__nav nav">
-          <details open>
+          <details class="details" open>
             <summary class="nav__title">Разделы сайта</summary>
           <ul class="nav__list">
             <li class="nav__item">
-            <a class="nav__link" href="#">О компании</a> </li>
+              <a class="nav__link" href="#">О компании</a>
+            </li>
             <li class="nav__item">
-            <a class="nav__link" href="#">Комплектующие</a></li>
+              <a class="nav__link" href="#">Комплектующие</a>
+            </li>
             <li class="nav__item">
-            <a class="nav__link" href="#">Продукты</a></li>
+              <a class="nav__link" href="#">Продукты</a>
+            </li>
             <li class="nav__item">
-            <a class="nav__link" href="#">Доставка</a></li>
-           <li class="nav__item">
-            <a class="nav__link" href="#">Производство печатных плат</a></li>
+              <a class="nav__link" href="#">Доставка</a>
+            </li>
             <li class="nav__item">
-            <a class="nav__link" href="#">Контакты</a></li>
+              <a class="nav__link" href="#">Производство печатных плат</a>
+            </li>
             <li class="nav__item">
-            <a class="nav__link" href="#">Монтаж печатных плат</a></li>
+              <a class="nav__link" href="#">Контакты</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Монтаж печатных плат</a>
+            </li>
           </ul>
           </details>
         </div>
 
         <div class="footer__contacts contacts">
-            <details open>
+            <details class="" open>
             <summary class="contacts__title">Наш офис </summary>
           <ul class="contacts__list">
             <li class="contacts__item">
-            <span class="contacts__address">г. Мытищи, Олимпийский проспект, д.10</span></li>
+              <span class="contacts__address">г. Мытищи, Олимпийский проспект, д.10</span>
+            </li>
             <li class="contacts__item">
-            <a  class="contacts__link" href="tel:+74955894050">+7 (495) 589-40-50</a></li>
+              <a class="contacts__link" href="tel:+74955894050">+7 (495) 589-40-50</a>
+            </li>
             <li class="contacts__item">
-            <a  class="contacts__link" href="tel:+79250038767">+7 (925) 389-58-29</a></li>
+              <a class="contacts__link" href="tel:+79250038767">+7 (925) 389-58-29</a>
+            </li>
             <li class="contacts__item">
-            <a  class="contacts__link" href="tel:+792692608079">+7 (925) 364-78-13</a></li>
+              <a class="contacts__link" href="tel:+792692608079">+7 (925) 364-78-13</a>
+            </li>
           </ul>
           </details>
+        </div>
       </div>
     </footer>
 
     <!-- Модалки -->
-    <section class="modal">
+    <section class="modal modal--active">
       <div class="modal__wrapper">
         <button class="modal__close" type="button">Закрыть</button>
           <h2 class="modal__title">Закажите звонок</h2>
@@ -227,19 +250,18 @@
             <form class="modal__form form" method="POST">
             <div class="form__wrapper">
               <label class="visually-hidden" for="name">Ваше имя:</label>
-              <input type="text" name="name" placeholder="Имя" id="name" required>
+              <input type="text" name="name-modal" placeholder="Имя" id="name-modal" required>
               <label class="visually-hidden" for="phone">Ваш номер телефона:</label>
-              <input type="tel" name="phone" placeholder="Телефон" id="phone" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7}(000)000-00-00" required>
+              <input type="tel" name="phone-modal" placeholder="Телефон" id="phone-modal" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7}(000)000-00-00" required>
               <label class="visually-hidden" for="question">Ваш вопрос:</label>
-              <textarea name="question" cols="30" rows="6" placeholder="Ваш вопрос" id="question" required></textarea>
+              <textarea name="question-modal" cols="30" rows="6" placeholder="Ваш вопрос" id="question-modal" required></textarea>
               <button class="button" type="submit">Отправить</button>
-              <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" checked>
-              <label class="form__agreement" for="agreement">Я согласен на обработку персональных данных</label>
-            </form>
+              <input class="visually-hidden" type="checkbox" name="agreement" id="agreement-modal" checked>
+              <label class="form__agreement" for="agreement-modal">Я согласен на обработку персональных данных</label>
             </div>
+            </form>
       </div>
     </section>
-    <div class="overlay"></div>
-    <script src="js/script.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>

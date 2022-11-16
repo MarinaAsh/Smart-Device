@@ -9,10 +9,10 @@
 
 @import "./blocks/header/header.scss";
 
-// Promo
-@import "./blocks/header/promo.scss";
-
 // ============= Main
+
+// Promo
+@import "./blocks/main/promo.scss";
 
 // Advantages
 @import "./blocks/main/advantages.scss";
@@ -22,6 +22,7 @@
 
 // Products
 @import "./blocks/main/products.scss";
+@import "./blocks/main/product.scss";
 
 // Ask-us
 @import "./blocks/main/ask-us.scss";

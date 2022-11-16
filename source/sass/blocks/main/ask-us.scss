@@ -18,31 +18,24 @@
 
 .ask-us__wrapper {
   position: relative;
-  width: 1220px;
   padding-left: 625px;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 510px;
-    height: 285px;
-    top: 0;
-    left: 0;
-    background: url("../img/paper-airplane.png") no-repeat center;
-  }
 
   @media (max-width: $tablet-width) {
     padding: 0;
-    width: 670px;
-
-    &::before {
-      display: none;
-    }
   }
+}
 
-  @media (max-width: $mobile-width) {
-    padding: 0;
-    width: 270px;
+.ask-us__wrapper::before {
+  position: absolute;
+  content: "";
+  width: 510px;
+  height: 285px;
+  top: 0;
+  left: 0;
+  background: url("../img/paper-airplane.png") no-repeat center;
+
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }
 

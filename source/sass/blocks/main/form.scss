@@ -75,7 +75,7 @@
   position: relative;
   cursor: pointer;
 
-  &::before {
+  .form input[type="checkbox"] + label::before {
     position: absolute;
     content: "";
     width: 14px;
@@ -87,7 +87,7 @@
 }
 
 .form input[type="checkbox"]:checked + label {
-  &::before {
+  .form input[type="checkbox"] + label::before {
     background: url("../img/checkbox-icon.svg") no-repeat center;
   }
 }

@@ -32,35 +32,35 @@
   &:active {
     opacity: 0.7;
   }
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: -6px;
-    left: -6px;
-    width: 40px;
-    height: 40px;
-    background-repeat: no-repeat;
-  }
+.social__link::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+}
 
-  &--ok::after {
-    background-image: url("../img/icon-ok.svg");
-  }
+.social__link--ok::after {
+  background-image: url("../img/icon-ok.svg");
+}
 
-  &--vk::after {
-    background-image: url("../img/icon-vk.svg");
-  }
+.social__link--vk::after {
+  background-image: url("../img/icon-vk.svg");
+}
 
-  &--pn::after {
-    background-image: url("../img/icon-pinterest.svg");
-  }
+.social__link--pn::after {
+  background-image: url("../img/icon-pinterest.svg");
+}
 
-  &--ok:hover,
-  &--ok:focus,
-  &--vk:hover,
-  &--vk:focus,
-  &--pn:hover,
-  &--pn:focus {
-    background-color: $accent-color;
-  }
+.social__link--ok:hover,
+.social__link--ok:focus,
+.social__link--vk:hover,
+.social__link--vk:focus,
+.social__link--pn:hover,
+.social__link--pn:focus {
+  background-color: $accent-color;
 }

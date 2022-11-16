@@ -1,24 +1,48 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 
-// ---------------------------------
+document.querySelector('.nojs').classList.remove('nojs');
 
 window.addEventListener('DOMContentLoaded', () => {
-
-  // Utils
-  // ---------------------------------
-
   iosVhFix();
 
-  // Modules
-  // ---------------------------------
-
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
   });
 });
+
+const openModal = (triggerSelector, modalDataSelector) => {
+  const trigger = document.querySelector(triggerSelector);
+  const modal = document.querySelector(modalDataSelector);
+  if (!trigger || !modal) {
+    return;
+  }
+  trigger.addEventListener('click', (elem) => {
+    elem.preventDefault();
+    modal.classList.add('modal--active');
+  });
+};
+
+
+openModal('.header__button', '.modal');
+
+const closeModal = () => {
+  const modals = document.querySelectorAll('.modal');
+  if (!modals) {
+    return;
+  }
+  modals.forEach((elem) => {
+    elem.addEventListener('click', (el) => {
+      if (
+        el.target.closest('.modal__close')) {
+        el.target.closest('.modal--active');
+      }
+    });
+  });
+};
+
+closeModal();
+
 
 // ---------------------------------
 

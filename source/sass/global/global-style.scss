@@ -18,18 +18,25 @@ body {
   overflow: hidden;
 }
 
+*,
+**::before,
+**::after {
+  box-sizing: border-box;
+}
+
 .wrapper {
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: 1492px;
-  width: 1240px;
+  max-width: 1260px;
+  width: 100%;
+  padding: 0 20px;
 
   @media (max-width: $tablet-width) {
-    max-width: 100%;
-    width: 100%;
+    width: 710px;
   }
 
   @media (max-width: $mobile-width) {
-    width: 100%;
+    width: 290px;
+    padding: 0 10px;
   }
 }
